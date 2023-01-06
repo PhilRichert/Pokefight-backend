@@ -5,11 +5,12 @@ import pokemonRoutes from "./routes/pokemonRoutes.js";
 import gameRoutes from "./routes/gameRoutes.js";
 
 const server = express();
+const bodyParser = require("body-parser");
 const port = 8080;
 
 // use cors
 server.use(cors());
-
+server.use(bodyParser.urlencoded({ extended: false }));
 server.use(express.json());
 
 // use Router for /pokemon
