@@ -2,7 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import pokemonRoutes from "./routes/pokemonRoutes.js";
-// import gameRoutes from "./routes/gameRoutes.js";
+import gameRoutes from "./routes/gameRoutes.js";
 
 const server = express();
 const port = 8080;
