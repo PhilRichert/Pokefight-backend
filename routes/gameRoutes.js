@@ -1,12 +1,12 @@
-// import express from "express";
-// // import {
-// //   game_create_post,
-// //   game_results,
-// // } from "../controllers/gameController.js";
+import express from "express";
+import {
+  game_create_post,
+  get_scorboard,
+} from "../controllers/gameController.js";
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.post("/save", game_create_post);
-// router.get("/leaderboard", game_results);
+router.post("/save", game_create_post);
+router.get("/leaderboard", get_scorboard);
 
-// export default router;
+export default router;
