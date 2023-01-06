@@ -15,8 +15,8 @@ server.use(express.json());
 // use Router for /pokemon
 server.use("/pokemon", pokemonRoutes);
 
-// use Router for /game
-// server.use("/game", gameRoutes);
+//  use Router for /game
+server.use("/game", gameRoutes);
 
 // alternativ 404
 server.all("*", (req, res) => {
