@@ -24,6 +24,6 @@ server.all("*", (req, res) => {
   res.send("Moin hier gibt es nichts zu sehen");
 });
 
-server.listen(process.env.PORT ?? port, () => {
+server.listen(port ?? port, () => {
   console.log(`Server läuft auf ${port}`);
 });
