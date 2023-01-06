@@ -1,14 +1,10 @@
 import mongoose from "mongoose";
 
 const resultSchema = new mongoose.Schema({
-  pokemonIdNPC: Number,
-  pokemonIdPlayer: Number,
-  winner: Number,
-  result: {
-    resultNPC: Number,
-    resultPlayer: Number,
-  },
-  date: { type: Date, default: Date.now },
+  winner: { name: String, id: Number },
+  loser: { name: String, id: Number },
 });
 
-export default mongoose.model("Result", resultSchema);
+const Result = mongoose.model("Result", resultSchema);
+
+export default Result;
