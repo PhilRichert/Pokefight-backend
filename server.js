@@ -3,9 +3,10 @@ import express from "express";
 import cors from "cors";
 import pokemonRoutes from "./routes/pokemonRoutes.js";
 import gameRoutes from "./routes/gameRoutes.js";
+import bodyParser from "body-parser";
 
 const server = express();
-const bodyParser = require("body-parser");
+
 const port = 8080;
 
 // use cors
