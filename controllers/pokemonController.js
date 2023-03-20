@@ -1,4 +1,5 @@
-import pokedex from "../src/pokedex.json" assert { type: "json" };
+import pokedexfile from "../src/pokedex.json";
+const pokedex = JSON.parse(pokedexfile("./package.json"));
 
 const pokemonById = (req) => {
   try {
