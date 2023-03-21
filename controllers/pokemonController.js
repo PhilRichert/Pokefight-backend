@@ -1,4 +1,6 @@
-import pokedex from "../src/pokedex.json" assert { type: "json" };
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pokedex = require("../src/pokedex.json");
 
 const pokemonById = (req) => {
   try {
