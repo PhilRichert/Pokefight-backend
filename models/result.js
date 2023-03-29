@@ -1,14 +1,11 @@
 import mongoose from "mongoose";
 
-const resultSchema = new mongoose.Schema(
-  {
-    winnername: { type: String, required: true },
-    winnerid: { type: Number, required: true },
-    losername: { type: String, required: true },
-    loserid: { type: Number, required: true },
-  },
-  { typeKey: "$type" }
-);
+const resultSchema = new mongoose.Schema({
+  winnername: { String },
+  winnerid: { Number },
+  losername: { String },
+  loserid: { Number },
+});
 
 const Result = mongoose.model("Result", resultSchema);
 
