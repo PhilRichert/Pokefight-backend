@@ -20,8 +20,10 @@ const game_create_post = async (req, res) => {
   try {
     if ((req.body.name && req.body.id !== undefined) || 0) {
       await Result.create({
-        winner: { name: req.body.name, id: req.body.id },
-        loser: { name: req.body.name, id: req.body.id },
+        winnername: req.body.winnername,
+        winnerid: req.body.winnerid,
+        losername: req.body.losername,
+        loserid: req.body.loserid,
       });
       res.send("Added to Scoreboard");
     }

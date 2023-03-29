@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
 
 const resultSchema = new mongoose.Schema({
-  winner: { name: String, id: Number },
-  loser: { name: String, id: Number },
+  winnername: { type: String, required: true },
+  winnerid: { type: Number, required: true },
+  losername: { type: String, required: true },
+  loserid: { type: Number, required: true },
 });
 
 const Result = mongoose.model("Result", resultSchema);
