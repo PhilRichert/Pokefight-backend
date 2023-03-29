@@ -18,7 +18,7 @@ mongoose.connection.on("error", (err) => {
 
 const game_create_post = async (req, res) => {
   try {
-    if ((req.body.name && req.body.id !== undefined) || 0) {
+    if ((req.body.winnername && req.body.winnerid !== undefined) || 0) {
       await Result.create({
         winnername: req.body.winnername,
         winnerid: req.body.winnerid,
