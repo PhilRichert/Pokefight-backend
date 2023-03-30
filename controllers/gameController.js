@@ -40,10 +40,10 @@ const game_create_post = async (req, res) => {
   const { winnername, winnerid, losername, loserid } = req.body;
 
   const newResult = await Result.create({
-    winnername: req.body.winnername,
-    winnerid: req.body.winnerid,
-    losername: req.body.losername,
-    loserid: req.body.loserid,
+    winnername: winnername,
+    winnerid: winnerid,
+    losername: losername,
+    loserid: loserid,
   });
   res.json(newResult);
 };
