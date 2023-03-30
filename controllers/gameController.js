@@ -17,34 +17,26 @@ mongoose.connection.on("error", (err) => {
 });
 
 const game_create_post = async (req, res) => {
-  // try {
-  //   if (
-  //     (req.body.winnername &&
-  //       req.body.winnerid &&
-  //       req.body.losername &&
-  //       req.body.loserid !== undefined) ||
-  //     0
-  //   ) {
-  //     await Result.create({
-  //       winnername: req.body.winnername,
-  //       winnerid: req.body.winnerid,
-  //       losername: req.body.losername,
-  //       loserid: req.body.loserid,
-  //     });
-  //     res.send("Added to Scoreboard");
-  //   }
-  // }
-  //   catch (error) {
-  //     res.send(`Fehler: ${error}`);
-  //   }
-  const { winnername, winnerid, losername, loserid } = req.body;
+  try {
+    if (
+      (req.body.winnername &&
+        req.body.winnerid &&
+        req.body.losername &&
+        req.body.loserid !== undefined) ||
+      0
+    ) {
+      await Result.create({
+        winnername: req.body.winnername,
+        winnerid: req.body.winnerid,
+        losername: req.body.losername,
+        loserid: req.body.loserid,
+      });
+      res.send("Added to Scoreboard");
+    }
+  } catch (error) {
+    res.send(`Fehler: ${error}`);
+  }
 
-  const newResult = await Result.create({
-    winnername: winnername,
-    winnerid: winnerid,
-    losername: losername,
-    loserid: loserid,
-  });
   res.json(newResult);
 };
 
