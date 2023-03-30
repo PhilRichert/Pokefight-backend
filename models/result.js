@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+const { Schema } = mongoose;
 
 const resultSchema = new mongoose.Schema({
   winnername: { String },
