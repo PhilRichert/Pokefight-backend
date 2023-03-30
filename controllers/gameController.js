@@ -37,7 +37,7 @@ const game_create_post = async (req, res) => {
     res.send(`Fehler: ${error}`);
   }
 
-  res.json(newResult);
+  console.log(res);
 };
 
 const get_scorboard = async (req, res) => {
