@@ -52,11 +52,12 @@ const get_scorboard = async (req, res) => {
 const delete_scorboard = async (req, res) => {
   try {
     const scoreb = await Result.findById(req.params.id);
-    console.log(req.params.id);
+    console.log(scoreb);
     await scoreb.remove();
     res.send({ data: true });
   } catch (error) {
     res.status(404).send({ error });
+    console.log(error);
   }
 };
 
