@@ -7,7 +7,7 @@ import {
 
 const router = express.Router();
 
-router.get("/leaderboard/:id", delete_scorboard);
+router.delete("/leaderboard/:id", delete_scorboard);
 router.get("/leaderboard", get_scorboard);
 router.post("/save", game_create_post);
 
