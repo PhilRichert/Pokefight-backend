@@ -48,4 +48,15 @@ const get_scorboard = async (req, res) => {
     res.send(error);
   }
 };
-export { game_create_post, get_scorboard };
+
+const delete_scorboard = async (req, res) => {
+  try {
+    const scoreb = await Result.findById(req.params._id);
+    await scoreb.remove();
+    res.send({ data: true });
+  } catch {
+    res.status(404).send({ error: "scoreboard not found" });
+  }
+};
+
+export { game_create_post, get_scorboard, delete_scorboard };

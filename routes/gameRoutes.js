@@ -2,11 +2,13 @@ import express from "express";
 import {
   game_create_post,
   get_scorboard,
+  delete_scorboard,
 } from "../controllers/gameController.js";
 
 const router = express.Router();
 
-router.post("/save", game_create_post);
+router.get("/leaderboard/:id", delete_scorboard);
 router.get("/leaderboard", get_scorboard);
+router.post("/save", game_create_post);
 
 export default router;
