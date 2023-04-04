@@ -51,8 +51,8 @@ const get_scorboard = async (req, res) => {
 
 const delete_scorboard = async (req, res) => {
   try {
-    const scoreb = await Result.findById(req.params._id);
-    console.log(scoreb);
+    const scoreb = await Result.findById(req.params.id);
+    console.log(req.params.id);
     await scoreb.remove();
     res.send({ data: true });
   } catch (error) {
