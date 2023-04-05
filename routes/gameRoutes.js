@@ -7,8 +7,8 @@ import {
 
 const router = express.Router();
 
-router.delete("/leaderboard/:id", delete_scorboard);
 router.get("/leaderboard", get_scorboard);
 router.post("/save", game_create_post);
+router.delete("/leaderboard/:id", delete_scorboard);
 
 export default router;
